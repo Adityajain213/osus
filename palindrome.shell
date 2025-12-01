@@ -1,0 +1,17 @@
+#!/bin/bash
+
+echo "Enter a string:"
+read str
+
+rev=""                               # reversed string
+for (( i=${#str}-1; i>=0; i-- ))      # loop from last character
+do
+    rev="$rev${str:$i:1}"             # build reverse
+done
+
+if [ "$str" = "$rev" ]                # compare
+then
+    echo "Palindrome"
+else
+    echo "Not Palindrome"
+fi

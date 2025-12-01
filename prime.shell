@@ -1,0 +1,6 @@
+#!/bin/bash
+read -p "Enter number: " n
+for ((i=2;i*i<=n;i++)); do
+    ((n%i==0)) && echo "Not Prime" && exit
+done
+((n>1)) && echo "Prime" || echo "Not Prime"
